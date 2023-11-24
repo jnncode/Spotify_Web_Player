@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-container">
+            <div class="left-sidebar-1">
+                <image src="src/assets/icons/spotify.svg" id="spotify" alt="spotify" />
+                <span id="spotify-text">Spotify<br /><br /></span>
+                <image src="src/assets/icons/home.svg" id="home" alt="home" />
+                <span id="home-text">Home<br /><br /></span>
+                <image src="src/assets/icons/search.svg" id="search" alt="search" />
+                <span id="search-text">Search<br /><br /></span>
+            </div>
+            <div class="left-sidebar-2">
+                <image src="src/assets/icons/library.svg" id="library" alt="library" />
+                <span id="library-text">Your Library</span><span><image src="src/assets/icons/add.svg" id="add" alt="add" /></span>
+                <div class="bubble">Playlists</div>
+                <span id="recents-text">Recents</span><span><image src="src/assets/icons/recents.svg" id="list" alt="list"/></span><span><image src="src/assets/icons/bubble-search.svg" id="bubble-search" alt="search" /></span>
+                <div class="playlist-list">
+                    <div class="playlist-item">edm</div>
+                    <div class="playlist-item">rap</div>
+                    <div class="playlist-item">pop</div>
+                    <div class="playlist-item">rnb</div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <h2 id="greetings"></h2>
+            <!--Arrows, Install App Option, Bell, and Account Icon-->
+            <div class="playlist-grid">
+                <div class="playlist-block"><span><image src="src/assets/images/nothing_was_the_same.jpg" class="cover" alt="Drake" /><span class="cover-text">Nothin Was The Same</span></span></div>
+                <div class="playlist-block"><span><image src="src/assets/images/graduation.jpg" class="cover" alt="Kanye West" /><span class="cover-text">Kanye West</span></span></div>
+                <div class="playlist-block"><span><image src="src/assets/images/watch_the_throne.jpg" class="cover" alt="Jay-Z" /><span class="cover-text">Watch The Throne</span></span></div>
+                <div class="playlist-block"><span><image src="src/assets/images/sweet_sexy_savage.jpg" class="cover" alt="Kehlani" /><span class="cover-text">rnb</span></span></div>
+            </div>
+            <div class="suggestions">
+                <h3 id="playlist-type">Mood</h3>
+                <!-- <div class="grid-card">Happy</div>
+                <div class="grid-card">Content</div>
+                <div class="grid-card">Calm</div>
+                <div class="grid-card">Bored</div> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="current-play"></div>
+            <div><image src="src/assets/images/hidden_door.jpg" class="current-cover" alt="current-cover"/></div>
+        <div class="play-options"></div>
+        <div class="other-options"></div>      
+    </div>
+    <script src="src/data/datetime.js"></script>
+</body>
+</html>
