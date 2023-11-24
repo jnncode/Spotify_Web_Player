@@ -1,0 +1,217 @@
+@import url('/src/assets/fonts/font.css');
+:root {
+    font-family: 'avenir', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.left-sidebar-1 {
+    background-color: #121212;
+    border-radius: 8px;
+    width: 270px;
+    height: 154px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#spotify, #home, #search, #library {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#spotify-text {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    color: #FFFFFF;
+}
+
+#home-text, #search-text {
+    position: relative;
+    top: 15px;
+    left: 40px;
+    color: #c8c8c8;
+}
+
+#home-text:hover, #search-text:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.left-sidebar-2 {
+    background-color: #121212;
+    border-radius: 8px;
+    width: 270px;
+    height: 600px;
+}
+
+#library-text {
+    position: relative;
+    left: 25px;
+    top: 17px;
+    font-weight: 700;
+    color: #c8c8c8;
+}
+
+#library-text:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#add {
+    position: relative;
+    top: 15px;
+    left: 120px;
+}
+
+.bubble {
+    position: relative;
+    background-color: #2a2a2a;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 9999px;
+    padding: 8px;
+    width: 70px;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    top: 35px;
+}
+
+#bubble-search {
+    position: relative;
+    top: 55px;
+    left: -45px;
+}
+
+#recents-text {
+    position: relative;
+    top: 50px;
+    left: 180px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #c8c8c8;
+}
+
+#recents-text:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#list {
+    position: relative;
+    top: 53px;
+    left: 185px;
+}
+
+.playlist-item {
+    position: relative;
+    color: #FFFFFF;
+    top: 70px;
+    left: 12px;
+    border-radius: 5px;
+    width: 234px;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.playlist-item:hover {
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.content-container {
+    background-color: #121212;
+    border-radius: 8px;
+    margin-left: 7px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#greetings {
+    position: relative;
+    top: 50px;
+    left: 18px;
+    color: #FFFFFF;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    overflow-x: hidden;
+    grid-gap: 8px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    color: #FFFFFF;
+}
+
+.playlist-block {
+    flex-direction: column;
+    background-color: #484848;
+    border-radius: 8px;
+    width: 532px;
+    box-sizing: border-box;
+    margin: 8px;
+    font-weight: 700;
+    font-size: 12px;
+}
+.playlist-block:hover {
+    background-color: #565656;
+    cursor: pointer;
+}
+
+.cover {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.cover-text {
+    position: relative;
+    left: 7px;
+    bottom: 17px;
+}
+
+.suggestions {
+    display: grid;
+    position: relative;
+    background-color: #262626;
+    color: #FFFFFF;
+}
+
+#playlist-type {
+    position: absolute;
+    top: 60px;
+    left: 18px;
+}
+
+.grid-card {
+    column-count: 4;
+}
+
+.footer-container {
+    position: relative;
+    background-color: #000000;
+    height: 56px;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.current-cover {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 5px;
+    top: 12px;
+    left: 5px;
+}
