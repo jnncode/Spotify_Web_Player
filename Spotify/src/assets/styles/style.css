@@ -1,217 +1,258 @@
+/* Global Styles */
 @import url('/src/assets/fonts/font.css');
 :root {
-    font-family: 'avenir', sans-serif;
+    --default-background: #000000; /* Outside Container(s) */
+    --primary-color: #121212; /* Each Container */
+    --secondary-color: #FFFFFF;
+    --primary-highlight-color: #1a1a1a; /* Container Content Hover */
+    --secondary-highlight-color: #565656; /* Content-Container Playlist-Block Hover */
+    --nonhighlight-text-color: #c8c8c8; /* Inactive Text Color (No Hover) */
+    --nonhighlight-card-color: #262626; /* Inactive Card Color (No Hover) */
+    --bubble-color: #2b2b2b; /* Included List */
+    --playlist-block: #484848;
+    --regular-font-size: 1rem;
+    --medium-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --spacing: 0.5rem;
+
+    font-family: 'avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Backup(s) for Avenir Font Misbehavior(s) */
     background-color: #000000;
     margin: 0;
     padding: 0;
 }
 
+/* Layout Container (Grandparent) */
 .container {
     display: flex;
+    position: relative;
     box-sizing: border-box;
 }
 
+/* Left Sidebar - Section 1 (Parent) */
 .left-sidebar-1 {
-    background-color: #121212;
+    background-color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--regular-font-size);
     border-radius: 8px;
-    width: 270px;
-    height: 154px;
-    margin-bottom: 7px;
-    font-weight: 700;
-    font-size: 1rem;
+    width: 16.875rem;
+    height: 9.625rem;
+    margin-bottom: 0.438rem;
+}
+
+/* Left Sidebar - Icons and Text Styles */
+#spotify, #home, #search, #library, #bubble-search, #list, #library-text, #spotify-text, #home-text, #search-text, #add, #recents-text, .playlist-list-cover-text, #greetings, .playlist-block-cover-text, #playlist-type {
+    font-weight: var(--font-weight-bold);
+    position: relative;
 }
 
 #spotify, #home, #search, #library {
-    position: relative;
-    top: 20px;
-    left: 20px;
+    top: 1.25rem;
+    left: 1.25rem;
 }
 
-#spotify-text {
-    position: relative;
-    top: 15px;
-    left: 15px;
-    color: #FFFFFF;
+#spotify-text { /* Logo -- Separate Positioning */
+    color: var(--secondary-color);
+    top: 1rem;
+    left: 0.95rem;
+}
+
+#home-text {
+    color: var(--secondary-color);
+} 
+
+#search-text {
+    color: var(--nonhighlight-text-color);
 }
 
 #home-text, #search-text {
-    position: relative;
-    top: 15px;
-    left: 40px;
-    color: #c8c8c8;
+    font-weight: var(--font-weight-bold);
+    top: 1rem;
+    left: 1.75rem;
 }
 
-#home-text:hover, #search-text:hover {
-    color: #FFFFFF;
+#home:hover, #home-text:hover, #search:hover, #search-text:hover, #library:hover, #library-text:hover {
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
+/* Left Sidebar - Section 2 (Parent) */
 .left-sidebar-2 {
-    background-color: #121212;
+    background-color: var(--primary-color);
     border-radius: 8px;
-    width: 270px;
-    height: 600px;
+    width: 16.875rem;
+    height: 37.5rem;
 }
 
+/* Left Sidebar - Icons and Text Styles */
 #library-text {
-    position: relative;
-    left: 25px;
-    top: 17px;
-    font-weight: 700;
-    color: #c8c8c8;
+    color: var(--nonhighlight-text-color);
+    top: 1rem;
+    left: 1.75rem;
 }
-
-#library-text:hover {
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
 #add {
-    position: relative;
-    top: 15px;
-    left: 120px;
+    top: 1rem;
+    left: 7rem;
 }
 
 .bubble {
+    background-color: var(--bubble-color);
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--medium-font-size);
     position: relative;
-    background-color: #2a2a2a;
-    color: #FFFFFF;
     box-sizing: border-box;
-    border-radius: 9999px;
-    padding: 8px;
-    width: 70px;
-    margin-left: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    top: 35px;
+    border-radius: 624.938rem;
+    padding: 0.5rem;
+    width: 4.375rem;
+    margin-left: 0.938rem;
+    top: 2rem;
+}
+
+.bubble:hover {
+    background-color: var(--secondary-highlight-color);
 }
 
 #bubble-search {
-    position: relative;
-    top: 55px;
-    left: -45px;
+    top: 3rem;
+    left: -2.813rem;
 }
 
 #recents-text {
-    position: relative;
-    top: 50px;
-    left: 180px;
-    font-weight: 400;
-    font-size: 14px;
-    color: #c8c8c8;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--medium-font-size);
+    color: var(--nonhighlight-text-color);
+    top: 2.5rem;
+    left: 11rem;
 }
 
 #recents-text:hover {
-    color: #FFFFFF;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
 #list {
-    position: relative;
-    top: 53px;
-    left: 185px;
+    top: 2.70rem;
+    left: 11.45rem;
 }
 
 .playlist-item {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--regular-font-size);
     position: relative;
-    color: #FFFFFF;
-    top: 70px;
-    left: 12px;
+    text-align: left;
+    top: 3.40rem;
+    left: 0.8rem;
+    width: 14.625rem;
+    padding: 0.5rem;
     border-radius: 5px;
-    width: 234px;
-    padding: 8px;
-    font-size: 1rem;
-    font-weight: 400;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .playlist-item:hover {
-    background-color: #1a1a1a;
-    cursor: pointer;
-}
-
-.content-container {
-    background-color: #121212;
-    border-radius: 8px;
-    margin-left: 7px;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-#greetings {
-    position: relative;
-    top: 50px;
-    left: 18px;
-    color: #FFFFFF;
-}
-
-.playlist-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    overflow-x: hidden;
-    grid-gap: 8px;
-    position: relative;
-    top: 50px;
-    left: 10px;
-    color: #FFFFFF;
-}
-
-.playlist-block {
-    flex-direction: column;
-    background-color: #484848;
-    border-radius: 8px;
-    width: 532px;
-    box-sizing: border-box;
-    margin: 8px;
-    font-weight: 700;
-    font-size: 12px;
-}
-.playlist-block:hover {
-    background-color: #565656;
+    background-color: var(--primary-highlight-color);
     cursor: pointer;
 }
 
 .cover {
-    width: 48px;
-    height: 48px;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
     border-radius: 5px;
+    top: 0.1rem;
+    left: -0.3rem;
 }
 
-.cover-text {
+.playlist-list-cover-text {
+    left: 0.5rem;
+    bottom: 1.063rem;
+}
+
+/* Main Container (Parent) */
+.content-container {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    margin-left: 0.438rem;
+    width: 72rem;
+    overflow-x: hidden;
+}
+
+#greetings {
+    color: var(--secondary-color);
+    top: 3.125rem;
+    left: 1.125rem;
+}
+
+.playlist-grid {
+    display: grid;
     position: relative;
-    left: 7px;
-    bottom: 17px;
+    grid-template-columns: repeat(2,1fr);
+    overflow-x: hidden;
+    grid-gap: 8px;
+    top: 3.5rem;
+    left: 0.625rem;
+}
+
+.playlist-block {
+    background-color: var(--playlist-block);
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--small-font-size);
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 33.25rem;
+    margin: 0.5rem;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.playlist-block:hover {
+    background-color: var(--secondary-highlight-color);
+    cursor: pointer;
+}
+
+.playlist-block-cover-text {
+    left: 0.5rem;
+    bottom: 1.2rem;
 }
 
 .suggestions {
-    display: grid;
-    position: relative;
-    background-color: #262626;
-    color: #FFFFFF;
+    /* background-color: var(--nonhighlight-card-color); */
+    color: var(--secondary-color);
+    /* display: grid;
+    position: absolute; */
 }
 
 #playlist-type {
-    position: absolute;
-    top: 60px;
-    left: 18px;
+    top: 3.75rem;
+    left: 1.125rem;
 }
 
 .grid-card {
     column-count: 4;
 }
 
+/* Footer - Separated from Others (Parent) */
 .footer-container {
-    position: relative;
-    background-color: #000000;
+    position: fixed;
+    background-color: var(--default-background);
     height: 56px;
     box-sizing: border-box;
-    margin-top: auto;
+    bottom: 0;
 }
 
 .current-cover {
-    position: absolute;
+    position: fixed;
     width: 56px;
     height: 56px;
     border-radius: 5px;
-    top: 12px;
-    left: 5px;
+    bottom: 12px;
+    left: 10px;
 }
