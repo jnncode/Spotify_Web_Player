@@ -1,4 +1,4 @@
-// Defines appropriate greeting based on the time of the day
+// Defines appropriate greeting based on the time of day
 document.addEventListener("DOMContentLoaded", function() {
     const greetingsContainer = document.getElementById('greetings');
     setGreetings(greetingsContainer);
