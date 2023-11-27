@@ -2,20 +2,27 @@
 @import url('/src/assets/fonts/font.css');
 :root {
     --default-background: #000000; /* Outside Container(s) */
+
     --primary-color: #121212; /* Each Container */
     --secondary-color: #FFFFFF;
+
     --primary-highlight-color: #1a1a1a; /* Container Content Hover */
     --secondary-highlight-color: #565656; /* Content-Container Playlist-Block Hover */
     --nonhighlight-text-color: #c8c8c8; /* Inactive Text Color (No Hover) */
     --nonhighlight-card-color: #262626; /* Inactive Card Color (No Hover) */
+
     --bubble-color: #2b2b2b; /* Included List */
     --playlist-block: #484848;
+
     --regular-font-size: 1rem;
     --medium-font-size: 0.875rem;
     --small-font-size: 0.75rem;
-    --font-weight-bold: 700;
-    --font-weight-regular: 400;
-    --spacing: 0.5rem;
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+    
+    --large-border-radius: 9999px;
+    --regular-border-radius: 8px;
+    --small-border-radius: 5px;
 
     font-family: 'avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Backup(s) for Avenir Font Misbehavior(s) */
     background-color: #000000;
@@ -33,17 +40,32 @@
 /* Left Sidebar - Section 1 (Parent) */
 .left-sidebar-1 {
     background-color: var(--primary-color);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--bold-font-weight);
     font-size: var(--regular-font-size);
-    border-radius: 8px;
+    border-radius: var(--regular-border-radius);
     width: 16.875rem;
     height: 9.625rem;
     margin-bottom: 0.438rem;
 }
 
 /* Left Sidebar - Icons and Text Styles */
-#spotify, #home, #search, #library, #bubble-search, #list, #library-text, #spotify-text, #home-text, #search-text, #add, #recents-text, .playlist-list-cover-text, #greetings, .playlist-block-cover-text, #playlist-type {
-    font-weight: var(--font-weight-bold);
+#spotify,
+#home,
+#search, 
+#library,
+#bubble-search,
+#recents-list,
+#library-text,
+#spotify-text,
+#home-text,
+#search-text,
+#add,
+#recents-text,
+.playlist-list-cover-text,
+#greetings,
+.playlist-block-cover-text,
+#playlist-type {
+    font-weight: var(--bold-font-weight);
     position: relative;
 }
 
@@ -67,7 +89,7 @@
 }
 
 #home-text, #search-text {
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--bold-font-weight);
     top: 1rem;
     left: 1.75rem;
 }
@@ -77,10 +99,19 @@
     cursor: pointer;
 }
 
+#profile {
+    position: relative;
+    border-radius: 50%; /* Circle */
+    width: 1.75rem;
+    height: 1.75rem;
+    bottom: 7.5rem;
+    left: 85.5rem;
+}
+
 /* Left Sidebar - Section 2 (Parent) */
 .left-sidebar-2 {
     background-color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: var(--regular-border-radius);
     width: 16.875rem;
     height: 37.5rem;
 }
@@ -99,11 +130,11 @@
 .bubble {
     background-color: var(--bubble-color);
     color: var(--secondary-color);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--regular-font-weight);
     font-size: var(--medium-font-size);
+    border-radius: var(--large-border-radius);
     position: relative;
     box-sizing: border-box;
-    border-radius: 624.938rem;
     padding: 0.5rem;
     width: 4.375rem;
     margin-left: 0.938rem;
@@ -112,27 +143,23 @@
 
 .bubble:hover {
     background-color: var(--secondary-highlight-color);
+    cursor: pointer;
 }
 
 #bubble-search {
     top: 3rem;
-    left: -2.813rem;
+    right: 2.813rem;
 }
 
 #recents-text {
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--regular-font-weight);
     font-size: var(--medium-font-size);
     color: var(--nonhighlight-text-color);
     top: 2.5rem;
     left: 11rem;
 }
 
-#recents-text:hover {
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
-#list {
+#recents-list {
     top: 2.70rem;
     left: 11.45rem;
 }
@@ -140,15 +167,15 @@
 .playlist-item {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--regular-font-weight);
     font-size: var(--regular-font-size);
+    border-radius: var(--small-border-radius);
     position: relative;
     text-align: left;
     top: 3.40rem;
     left: 0.8rem;
     width: 14.625rem;
     padding: 0.5rem;
-    border-radius: 5px;
     box-shadow: none;
     border: none;
     outline: none;
@@ -160,12 +187,12 @@
 }
 
 .cover {
+    border-radius: var(--small-border-radius);
     position: relative;
     width: 3rem;
     height: 3rem;
-    border-radius: 5px;
     top: 0.1rem;
-    left: -0.3rem;
+    right: 0.3rem;
 }
 
 .playlist-list-cover-text {
@@ -176,7 +203,7 @@
 /* Main Container (Parent) */
 .content-container {
     background-color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: var(--regular-border-radius);
     margin-left: 0.438rem;
     width: 72rem;
     overflow-x: hidden;
@@ -201,11 +228,10 @@
 .playlist-block {
     background-color: var(--playlist-block);
     color: var(--secondary-color);
-    font-weight: var(--font-weight-bold);
     font-size: var(--small-font-size);
+    border-radius: var(--regular-border-radius);
     flex-direction: column;
     box-sizing: border-box;
-    border-radius: 8px;
     width: 33.25rem;
     margin: 0.5rem;
     box-shadow: none;
@@ -224,24 +250,73 @@
 }
 
 .suggestions {
-    /* background-color: var(--nonhighlight-card-color); */
     color: var(--secondary-color);
-    /* display: grid;
-    position: absolute; */
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    column-count: 4;
+    top: 8rem;
+    left: 1.25rem;
 }
 
 #playlist-type {
-    top: 3.75rem;
-    left: 1.125rem;
+    bottom: 4.5rem;
+    right: 68.15rem;
+}
+
+.grid-card, .grid-card-cover, .grid-card-title, .grid-card-features {
+    position: relative;
 }
 
 .grid-card {
-    column-count: 4;
+    background-color: var(--nonhighlight-card-color);
+    border-radius: var(--regular-border-radius);
+    width: 14rem;
+    height: 15rem;
+    bottom: 1rem;
+    left: 1.85rem;
+}
+
+.grid-card:hover {
+    background-color: var(--playlist-block);
+    cursor: pointer;
+}
+
+.grid-card-cover {
+    border-radius: var(--regular-border-radius);
+    width: 11rem;
+    height: 10rem;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.grid-card-title {
+    font-weight: var(--bold-font-weight);
+    font-size: var(--regular-font-size);
+}
+
+.grid-card-features {
+    font-weight: var(--regular-font-weight);
+    font-size: var(--small-font-size);
+}
+
+.grid-card-title {
+    top: 2.5rem;
+    right: 9.5rem;
+}
+
+.grid-card-features {
+    top: 2.75rem;
+    left: 0.75rem;
 }
 
 /* Footer - Separated from Others (Parent) */
-.footer-container {
+.footer-container, .current-cover, .current-song, .current-artist {
     position: fixed;
+}
+
+.footer-container {
     background-color: var(--default-background);
     height: 56px;
     box-sizing: border-box;
@@ -249,10 +324,89 @@
 }
 
 .current-cover {
-    position: fixed;
-    width: 56px;
-    height: 56px;
-    border-radius: 5px;
-    bottom: 12px;
-    left: 10px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--small-border-radius);
+    bottom: 0.75rem;
+    left: 0.625rem;
+}
+
+.current-song {
+    color: var(--secondary-color);
+    font-weight: var(--regular-font-weight);
+    font-size: var(--medium-font-size);
+    top: 49rem;
+    left: 5rem;
+}
+
+.current-artist {
+    color: var(--nonhighlight-text-color);
+    font-weight: var(--bold-font-weight);
+    font-size: var(--small-font-size);
+    top: 50.25rem;
+    left: 5rem;
+}
+
+.shuffle, .previous, .pause, .next, .repeat, .play-time, .lyrics, .queue, .connect, .volume, .volume-scale, .full-screen {
+    position: relative;
+}
+
+.shuffle {
+    bottom: 2.25rem;
+    left: 40rem;
+}
+
+.previous {
+    bottom: 2.4rem;
+    left: 40rem;
+}
+
+.pause {
+    bottom: 2.25rem;
+    left: 42rem;
+}
+
+.next { /* Slightly off */
+    bottom: 2.42rem;
+    left: 44rem;
+}
+
+.repeat {
+    bottom: 2.25rem;
+    left: 50.75rem;
+}
+
+.play-time {
+    bottom: .35rem;
+    left: 16rem;
+}
+
+.lyrics {
+    bottom: 3.25rem;
+    left: 71.5rem;
+}
+
+.queue {
+    bottom: 3.25rem;
+    left: 72.5rem;
+}
+
+.connect {
+    bottom: 3.25rem;
+    left: 73.25rem;
+}
+
+.volume {
+    bottom: 3.25rem;
+    left: 74rem;
+}
+
+.volume-scale {
+    bottom: 3rem;
+    left: 73.5rem;
+}
+
+.full-screen {
+    bottom: 3.35rem;
+    left: 73.5rem;
 }
