@@ -15,12 +15,13 @@
                 <span id="home-text">Home<br /><br /></span>
                 <image src="src/assets/icons/search.svg" id="search" alt="search" />
                 <span id="search-text">Search<br /><br /></span>
+                <image src="src/assets/images/selfie.jpg" id="profile" alt="profile" />
             </div>
             <div class="left-sidebar-2">
                 <image src="src/assets/icons/library.svg" id="library" alt="library" />
                 <span id="library-text">Your Library</span><span><image src="src/assets/icons/add.svg" id="add" alt="add" /></span>
                 <div class="bubble">Playlists</div>
-                <span id="recents-text">Recents</span><span><image src="src/assets/icons/recents.svg" id="list" alt="list"/></span><span><image src="src/assets/icons/bubble-search.svg" id="bubble-search" alt="search" /></span>
+                <span id="recents-text">Recents</span><span><image src="src/assets/icons/recents-list.svg" id="recents-list" alt="recents-list"/></span><span><image src="src/assets/icons/bubble-search.svg" id="bubble-search" alt="search" /></span>
                 <div class="playlist-list">
                     <button class="playlist-item"><span><image src="src/assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">d</span></span></button>
                     <button class="playlist-item"><span><image src="src/assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">o</span></span></button>
@@ -33,25 +34,39 @@
             <h2 id="greetings"></h2>
             <!--Arrows, Install App Option, Bell, and Account Icon-->
             <div class="playlist-grid">
-                <button class="playlist-block"><span><image src="src/assets/images/nothing_was_the_same.jpg" class="cover" alt="Drake" /><span class="playlist-block-cover-text">Nothin Was The Same</span></span></button>
-                <button class="playlist-block"><span><image src="src/assets/images/good_kid.jpg" class="cover" alt="Kendrick Lamar" /><span class="playlist-block-cover-text">Good Kid</span></span></button>
-                <button class="playlist-block"><span><image src="src/assets/images/watch_the_throne.jpg" class="cover" alt="Jay-Z" /><span class="playlist-block-cover-text">Watch The Throne</span></span></button>
-                <button class="playlist-block"><span><image src="src/assets/images/kod.jpg" class="cover" alt="J. Cole" /><span class="playlist-block-cover-text">KOD</span></span></button>
+                <button class="playlist-block"><span><image src="src/assets/images/nothing_was_the_same.jpg" class="cover" alt="Nothing Was The Same - Drake" /><span class="playlist-block-cover-text">Nothin Was The Same</span></span></button>
+                <button class="playlist-block"><span><image src="src/assets/images/damn.jpg" class="cover" alt="DAMN. - Kendrick Lamar" /><span class="playlist-block-cover-text">DAMN.</span></span></button>
+                <button class="playlist-block"><span><image src="src/assets/images/beerbongs_and_bentleys.jpg" class="cover" alt="Beerbongs & Bentleys - Post Malone" /><span class="playlist-block-cover-text">Beerbongs & Bentleys</span></span></button>
+                <button class="playlist-block"><span><image src="src/assets/images/shake_the_snow_globe.jpg" class="cover" alt="Shake The Snow Globe - Russ" /><span class="playlist-block-cover-text">Shake The Snow Globe</span></span></button>
             </div>
             <div class="suggestions">
                 <h3 id="playlist-type">Mood</h3>
-                <!-- <div class="grid-card">Happy</div>
-                <div class="grid-card">Content</div>
-                <div class="grid-card">Calm</div>
-                <div class="grid-card">Bored</div> -->
+                <div class="grid-card"><span><image src="src/assets/images/testing.jpg" class="grid-card-cover" alt="Testing - A$AP Rocky"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Kanye West, A$AP Rocky, Jay-Z, etc.</span></div>
+                <div class="grid-card"><span><image src="src/assets/images/forever_story.jpg" class="grid-card-cover" alt="Forever Story - JID"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Kendrick Lamar, JID, Meek Mill, etc.</span></div>
+                <div class="grid-card"><span><image src="src/assets/images/kod.jpg" class="grid-card-cover" alt="KOD - J. Cole"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Childish Gambino, Russ, J. Cole, etc.</span></div>
+                <div class="grid-card"><span><image src="src/assets/images/the_melodic_blue.jpg" class="grid-card-cover" alt="The Melodic Blue - Baby Keem"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Baby Keem, Lil Durk, Lil Baby, etc.</span></div>
             </div>
         </div>
     </div>
     <div class="footer-container">
         <div class="current-play"></div>
-            <div><image src="src/assets/images/mr.morale_the_big_steppers.jpg" class="current-cover" alt="current-cover"/></div>
+            <span><image src="src/assets/images/mr.morale_the_big_steppers.jpg" class="current-cover" alt="current-cover" /><p class="current-song">N95</p></span>
+            <p class="current-artist">Kendrick Lamar</p>
+            <span><image src="src/assets/icons/like.svg" class="like" alt="like"/></span>
         <div class="play-options"></div>
-        <div class="other-options"></div>      
+            <span><image src="src/assets/icons/shuffle.svg" class="shuffle" alt="shuffle" /></span>
+            <span><image src="src/assets/icons/repeat.svg" class="repeat" alt="repeat" /></span>
+            <span><image src="src/assets/icons/previous.svg" class="previous" alt="previous" /></span>
+            <span><image src="src/assets/icons/pause.svg" class="pause" alt="pause" /></span>
+            <span><image src="src/assets/icons/next.svg" class="next" alt="next" /></span>
+            <span><image src="src/assets/icons/play-time.svg" class="play-time" alt="play-time"/></span>
+        <div class="other-options"></div>
+            <span><image src="src/assets/icons/lyrics.svg" class="lyrics" alt="lyrics"/></span>
+            <span><image src="src/assets/icons/queue.svg" class="queue" alt="queue" /></span>
+            <span><image src="src/assets/icons/connect.svg" class="connect" alt="connect" /></span>
+            <span><image src="src/assets/icons/volume.svg" class="volume" alt="volume" /></span>    
+            <span><image src="src/assets/icons/volume-scale.svg" class="volume-scale" alt="volume-scale" /></span>
+            <span><image src="src/assets/icons/full-screen.svg" class="full-screen" alt="full-screen" /></span>
     </div>
     <script src="src/scripts/datetime.js"></script>
     <script src="src/scripts/highlight.js"></script>
