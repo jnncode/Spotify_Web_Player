@@ -2,10 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Web App</title>
+    <title>i love you</title>
+    <link rel="stylesheet" href="../assets/fonts/font.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="sidebar-container">
+            <div class="left-sidebar-1">
+                <image src="../assets/icons/spotify.svg" id="spotify" alt="spotify" />
+                <span id="spotify-text">Spotify<br /><br /></span>
+                <image src="../assets/icons/home.svg" id="home" alt="home" />
+                <span id="home-text">Home<br /><br /></span>
+                <image src="../assets/icons/search.svg" id="search" alt="search" />
+                <span id="search-text">Search<br /><br /></span>
+                <image src="../assets/images/selfie.jpg" id="profile" alt="profile" />
+            </div>
+            <div class="left-sidebar-2">
+                <image src="../assets/icons/library.svg" id="library" alt="library" />
+                <span id="library-text">Your Library</span><span><image src="../assets/icons/add.svg" id="add" alt="add" /></span>
+                <div class="bubble">Playlists</div>
+                <span id="recents-text">Recents</span><span><image src="../assets/icons/recents-list.svg" id="recents-list" alt="recents-list"/></span><span><image src="../assets/icons/playlist-search.svg" id="playlist-search" alt="search" /></span>
+                <div class="playlist-list">
+                    <button class="playlist-item"><span><image src="../assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">d</span></span></button>
+                    <button class="playlist-item"><span><image src="../assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">o</span></span></button>
+                    <button class="playlist-item"><span><image src="../assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">t</span></span></button>
+                    <button class="playlist-item"><span><image src="../assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">s</span></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <input type="text" class="search-bar" alt="search-bar" placeholder="What do you want to listen to?" />
+            <h2 id="search-type">Browse All</h2>
+            <div class="search-suggestions-grid">
+                <div class="search-grid-card-1"><span class="search-grid-card-title">Podcasts</span></div>
+                <div class="search-grid-card-2"><span class="search-grid-card-title">Audiobooks</span></div>
+                <div class="search-grid-card-3"><span class="search-grid-card-title">Live Events</span></div>
+                <div class="search-grid-card-4"><span class="search-grid-card-title">Made For You</span></div>
+                <div class="search-grid-card-5"><span class="search-grid-card-title">Hip-Hop</span></div>
+                <div class="search-grid-card-6"><span class="search-grid-card-title">Pop</span></div>
+                <div class="search-grid-card-7"><span class="search-grid-card-title">Rap</span></div>
+                <div class="search-grid-card-8"><span class="search-grid-card-title">R&B</span></div>
+                <div class="search-grid-card-9"><span class="search-grid-card-title">Latin</span></div>
+                <div class="search-grid-card-10"><span class="search-grid-card-title">EDM</span></div>
+                <div class="search-grid-card-11"><span class="search-grid-card-title">Rock</span></div>
+                <div class="search-grid-card-12"><span class="search-grid-card-title">Indie</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="current-play"></div>
+            <span><image src="../assets/images/mr.morale_the_big_steppers.jpg" class="current-cover" alt="current-cover" /><p class="current-song">N95</p></span>
+            <p class="current-artist">Kendrick Lamar</p>
+            <span><image src="../assets/icons/like.svg" class="like" alt="like"/></span>
+        <div class="play-options"></div>
+            <span><image src="../assets/icons/shuffle.svg" class="shuffle" alt="shuffle" /></span>
+            <span><image src="../assets/icons/repeat.svg" class="repeat" alt="repeat" /></span>
+            <span><image src="../assets/icons/previous.svg" class="previous" alt="previous" /></span>
+            <span><image src="../assets/icons/pause.svg" class="pause" alt="pause" /></span>
+            <span><image src="../assets/icons/next.svg" class="next" alt="next" /></span>
+            <span><image src="../assets/icons/play-time.svg" class="play-time" alt="play-time"/></span>
+        <div class="other-options"></div>
+            <span><image src="../assets/icons/lyrics.svg" class="lyrics" alt="lyrics"/></span>
+            <span><image src="../assets/icons/queue.svg" class="queue" alt="queue" /></span>
+            <span><image src="../assets/icons/connect.svg" class="connect" alt="connect" /></span>
+            <span><image src="../assets/icons/volume.svg" class="volume" alt="volume" /></span>    
+            <span><image src="../assets/icons/volume-scale.svg" class="volume-scale" alt="volume-scale" /></span>
+            <span><image src="../assets/icons/full-screen.svg" class="full-screen" alt="full-screen" /></span>
+    </div>
+    <script src="../scripts/button.js"></script>
 </body>
 </html>
