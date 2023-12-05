@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spotify</title>
+    <title>i love you</title>
+    <link rel="stylesheet" href="./src/assets/fonts/font.css">
     <link rel="stylesheet" href="./src/assets/styles/style.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <image src="src/assets/icons/library.svg" id="library" alt="library" />
                 <span id="library-text">Your Library</span><span><image src="src/assets/icons/add.svg" id="add" alt="add" /></span>
                 <div class="bubble">Playlists</div>
-                <span id="recents-text">Recents</span><span><image src="src/assets/icons/recents-list.svg" id="recents-list" alt="recents-list"/></span><span><image src="src/assets/icons/bubble-search.svg" id="bubble-search" alt="search" /></span>
+                <span id="recents-text">Recents</span><span><image src="src/assets/icons/recents-list.svg" id="recents-list" alt="recents-list"/></span><span><image src="src/assets/icons/playlist-search.svg" id="playlist-search" alt="search" /></span>
                 <div class="playlist-list">
                     <button class="playlist-item"><span><image src="src/assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">d</span></span></button>
                     <button class="playlist-item"><span><image src="src/assets/images/tyler_scream.jpg" class="cover" alt="Tyler The Creator Scream" /><span class="playlist-list-cover-text">o</span></span></button>
@@ -32,7 +33,6 @@
         </div>
         <div class="content-container">
             <h2 id="greetings"></h2>
-            <!--Arrows, Install App Option, Bell, and Account Icon-->
             <div class="playlist-grid">
                 <button class="playlist-block"><span><image src="src/assets/images/nothing_was_the_same.jpg" class="cover" alt="Nothing Was The Same - Drake" /><span class="playlist-block-cover-text">Nothin Was The Same</span></span></button>
                 <button class="playlist-block"><span><image src="src/assets/images/damn.jpg" class="cover" alt="DAMN. - Kendrick Lamar" /><span class="playlist-block-cover-text">DAMN.</span></span></button>
@@ -41,10 +41,12 @@
             </div>
             <div class="suggestions">
                 <h3 id="playlist-type">Mood</h3>
-                <div class="grid-card"><span><image src="src/assets/images/testing.jpg" class="grid-card-cover" alt="Testing - A$AP Rocky"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Kanye West, A$AP Rocky, Jay-Z, etc.</span></div>
-                <div class="grid-card"><span><image src="src/assets/images/forever_story.jpg" class="grid-card-cover" alt="Forever Story - JID"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Kendrick Lamar, JID, Meek Mill, etc.</span></div>
-                <div class="grid-card"><span><image src="src/assets/images/kod.jpg" class="grid-card-cover" alt="KOD - J. Cole"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Childish Gambino, Russ, J. Cole, etc.</span></div>
-                <div class="grid-card"><span><image src="src/assets/images/the_melodic_blue.jpg" class="grid-card-cover" alt="The Melodic Blue - Baby Keem"/></span><span class="grid-card-title">Mix</span><br /><span class="grid-card-features">Baby Keem, Lil Durk, Lil Baby, etc.</span></div>
+                <div class="home-suggestions-grid">
+                    <div class="home-grid-card"><span><image src="src/assets/images/testing.jpg" class="home-grid-card-cover" alt="Testing - A$AP Rocky"/></span><span class="home-grid-card-title">Mix</span><br /><span class="home-grid-card-features">Kanye West, A$AP Rocky, Jay-Z, etc.</span></div>
+                    <div class="home-grid-card"><span><image src="src/assets/images/forever_story.jpg" class="home-grid-card-cover" alt="Forever Story - JID"/></span><span class="home-grid-card-title">Mix</span><br /><span class="home-grid-card-features">Kendrick Lamar, JID, Meek Mill, etc.</span></div>
+                    <div class="home-grid-card"><span><image src="src/assets/images/kod.jpg" class="home-grid-card-cover" alt="KOD - J. Cole"/></span><span class="home-grid-card-title">Mix</span><br /><span class="home-grid-card-features">Childish Gambino, Russ, J. Cole, etc.</span></div>
+                    <div class="home-grid-card"><span><image src="src/assets/images/the_melodic_blue.jpg" class="home-grid-card-cover" alt="The Melodic Blue - Baby Keem"/></span><span class="home-grid-card-title">Mix</span><br /><span class="home-grid-card-features">Baby Keem, Lil Durk, Lil Baby, etc.</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -69,6 +71,6 @@
             <span><image src="src/assets/icons/full-screen.svg" class="full-screen" alt="full-screen" /></span>
     </div>
     <script src="src/scripts/datetime.js"></script>
-    <script src="src/scripts/highlight.js"></script>
+    <script src="src/scripts/button.js"></script>
 </body>
 </html>
